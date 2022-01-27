@@ -28,7 +28,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](https://github.com/NazimAitali/IP-address-tracker-solution/blob/master/IP-address-tracker-solution%201440px.png)
+![](https://github.com/NazimAitali/IP-address-tracker-solution/blob/master/IP-address-tracker-solution%20375px.png)
 
 ### Links
 
