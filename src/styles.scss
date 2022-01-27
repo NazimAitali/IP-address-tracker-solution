@@ -1,0 +1,159 @@
+@import "./styles/libs/mixin.scss";
+@import "./styles/libs/variables.scss";
+.App {
+  @include ElementParameters(100vw, 100vh, flex, unset, center, row);
+  overflow-x: hidden;
+}
+.Container {
+  @include ElementParameters(100%, 100%, flex, unset, center, column);
+}
+
+header {
+  @include ElementParameters(100%, 36.11%, flex, unset, center, column);
+  background-image: url(./assets/images/pattern-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.Title-content {
+  @include ElementParameters(100%, 27%, flex, center, center, row);
+}
+.Title {
+  color: $White;
+  font-size: clamp(1em, 6.58vw, 2em);
+  font-family: $Rubik;
+  margin: 0;
+}
+.Research-content {
+  @include ElementParameters(100%, 22%, flex, center, center, row);
+  position: relative;
+}
+.Research {
+  @include ElementParameters(85.5%, 83%, flex, center, center, row);
+  border-radius: 0.8em;
+  border: none;
+  text-indent: 6.8%;
+  font-size: clamp(1em, 4.8vw, 1.2em);
+  font-family: $Rubik;
+  cursor: pointer;
+}
+.Research-icon {
+  background-image: url(./assets/images/icon-arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: $Black;
+  width: 15.5%;
+  height: 86.8%;
+  position: absolute;
+  top: 6.5%;
+  right: 6.5%;
+  border-top-right-radius: 0.8em;
+  border-bottom-right-radius: 0.8em;
+  cursor: pointer;
+}
+.Detail-content {
+  @include ElementParameters(100%, 98.3%, flex, unset, center, column);
+  position: absolute;
+  top: 56%;
+  z-index: 999;
+}
+.Localisation-card {
+  @include ElementParameters(87%, 100%, flex, space-evenly, center, column);
+  background-color: $White;
+  border-radius: 0.8em;
+}
+.Localisation-informations {
+  @include ElementParameters(100%, 15%, flex, space-between, center, column);
+}
+.Card-title {
+  font-size: clamp(0.5em, 3.35vw, 1.2em);
+  font-family: $Rubik;
+  color: $Dark-Gray;
+  font-weight: 400;
+}
+.Card-data {
+  font-size: clamp(1.23em, 3vw, 1.2em);
+  font-family: $Rubik;
+  color: $Black;
+  font-weight: 500;
+}
+main {
+  @include ElementParameters(100%, 63.89%, flex, unset, center, column);
+}
+.Map-content {
+  @include dimension(100%, 100%);
+}
+.leaflet-container {
+  height: 100%;
+  top: 0;
+  width: 100%;
+  position: relative;
+  background: #1f2124 !important;
+}
+.leaflet-top {
+  display: none;
+}
+.Error {
+  @include ElementParameters(100%, 100%, flex, center, center, column);
+}
+.Error p {
+  text-align: center;
+  width: 75%;
+}
+@media (min-width: $Tab) {
+  .Localisation-informations {
+    flex-direction: row;
+    width: 70%;
+  }
+}
+@media (min-width: $Desktop) {
+  header {
+    height: 35%;
+  }
+  .Title-content {
+    height: 34%;
+  }
+  .Title {
+    font-size: clamp(1em, 2.1vw, 2em);
+  }
+  .Research-content {
+    @include dimension(45%, 20%);
+  }
+  .Research {
+    @include dimension(85%, 96.5%);
+  }
+  .Research-icon {
+    @include dimension(9%, 100%);
+    top: 0%;
+    right: 7%;
+  }
+  .Detail-content {
+    @include ElementParameters(100%, 88.3%, flex, center, center, column);
+  }
+  .Localisation-card {
+    @include ElementParameters(77%, 65%, flex, space-evenly, flex-start, row);
+  }
+  .Localisation-informations {
+    @include ElementParameters(
+      25%,
+      37%,
+      flex,
+      space-between,
+      flex-start,
+      column
+    );
+    margin-top: 2.1em;
+  }
+  .Card-title {
+    margin-left: 2.2em;
+    font-size: clamp(0.5em, 0.93em, 1.2em);
+  }
+  .Card-data {
+    @include dimension(66%, 48%);
+    margin-left: 1.4em;
+    font-size: clamp(1.23em, 1.6vw, 2em);
+  }
+  main {
+    height: 65%;
+  }
+}
